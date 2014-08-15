@@ -4,21 +4,26 @@
   "description": "Unix command utility on Node.js",
   "main": "lib/index.js",
   "scripts": {
-    "test": "mocha -u tdd",
+    "test": "mocha -u tdd --require intelli-espower-loader",
     "coveralls": "mocha -u tdd --require blanket -R mocha-lcov-reporter | coveralls"
   },
   "author": "norahiko",
   "license": "MIT",
+  "directories": {
+      "test": "test/"
+  },
   "dependencies": {
     "globy": "~0.1.2",
     "runsync": "~0.1.4"
   },
   "devDependencies": {
-    "chai": "~1.9.1",
     "mocha": "~1.21.4",
     "mocha-lcov-reporter": "0.0.1",
     "blanket": "~1.1.6",
-    "coveralls": "~2.11.1"
+    "coveralls": "~2.11.1",
+    "power-assert": "~0.8.0",
+    "espower-loader": "~0.8.0",
+    "intelli-espower-loader": "~0.3.0"
   },
   "config": {
     "blanket": {
