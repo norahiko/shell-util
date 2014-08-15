@@ -1,5 +1,5 @@
 {
-  "name": "unix-util",
+  "name": "shell-util",
   "version": "0.0.0",
   "description": "Unix command utility on Node.js",
   "main": "lib/index.js",
@@ -27,7 +27,7 @@
   },
   "config": {
     "blanket": {
-      "pattern": "index.js",
+      "pattern": "lib",
       "data-cover-never": "node_modules"
     }
   }
