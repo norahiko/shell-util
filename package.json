@@ -1,0 +1,29 @@
+{
+  "name": "unix-util",
+  "version": "0.0.0",
+  "description": "Unix command utility on Node.js",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "mocha -u tdd",
+    "coveralls": "mocha -u tdd --require blanket -R mocha-lcov-reporter | coveralls"
+  },
+  "author": "norahiko",
+  "license": "MIT",
+  "dependencies": {
+    "globy": "~0.1.2",
+    "runsync": "~0.1.4"
+  },
+  "devDependencies": {
+    "chai": "~1.9.1",
+    "mocha": "~1.21.4",
+    "mocha-lcov-reporter": "0.0.1",
+    "blanket": "~1.1.6",
+    "coveralls": "~2.11.1"
+  },
+  "config": {
+    "blanket": {
+      "pattern": "index.js",
+      "data-cover-never": "node_modules"
+    }
+  }
+}
