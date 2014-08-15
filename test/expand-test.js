@@ -1,9 +1,6 @@
 "use strict";
 
-var sh = require("../lib/index.js");
-
-//var assert = require("chai").assert;
-
+var sh = require("../lib/shell-util.js");
 var assert = require("power-assert");
 var env = sh.env;
 

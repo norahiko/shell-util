@@ -2,7 +2,7 @@
   "name": "shell-util",
   "version": "0.0.0",
   "description": "Unix command utility on Node.js",
-  "main": "lib/index.js",
+  "main": "lib/shell-util.js",
   "scripts": {
     "test": "mocha -u tdd --require intelli-espower-loader",
     "coveralls": "mocha -u tdd --require blanket -R mocha-lcov-reporter | coveralls"
