@@ -45,6 +45,11 @@ suite("FileSytem:", function() {
         }, "sh.listdir");
     });
 
+    test("which", function() {
+        assert(sh.which("node") !== null);
+        assert(sh.which("not_exists_file") === null);
+    });
+
     test("mkdir", function() {
         sh.mkdir("newdir");
         sh.mkdir("newdir"); // not throws Error
@@ -102,6 +107,13 @@ suite("FileSytem:", function() {
     test("move files", function() {
         sh.move("lib/*.txt", "bin");
         deepEqual(fs.readdirSync("bin"), ["app", "main.txt", "util.txt"]);
+
+    });
+
+    test("move files failed", function() {
+        assert.throws(function () {
+            sh.move("lib/*.txt", "new_file");
+        }, "ShellUtil.move");
     });
 
     test("copy", function() {
@@ -146,6 +158,16 @@ suite("FileSytem:", function() {
         sh.copy(["$main", "$util"], "bin");
         assert(fs.readFileSync("bin/main.txt").toString() === "main");
         assert(fs.readFileSync("bin/util.txt").toString() === "util");
+    });
+
+    test("copy failed", function() {
+        assert.throws(function () {
+            sh.copy("not_exists_file", "bin");
+        }, "ShellUtil.copy");
+
+        assert.throws(function () {
+            sh.copy("lib/*", "not_dir");
+        }, "ShellUtil.copy");
     });
 
     test("remove", function() {
