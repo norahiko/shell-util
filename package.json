@@ -10,11 +10,11 @@
   "author": "norahiko",
   "license": "MIT",
   "directories": {
-      "test": "test/"
+    "test": "test/"
   },
   "dependencies": {
-    "globy": "~0.1.2",
-    "runsync": "~0.1.4"
+    "globy": "~0.1.3",
+    "runsync": "~0.1.5"
   },
   "devDependencies": {
     "mocha": "~1.21.4",
