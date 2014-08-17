@@ -37,5 +37,5 @@ exports.setupTestFiles = function setup(sh) {
 
 
 exports.teardownTestFiles = function () {
-
+    process.chdir(root);
 };
