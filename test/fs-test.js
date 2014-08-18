@@ -5,6 +5,7 @@ var setups = require("./setup.js");
 
 var fs = require("fs");
 var deepEqual = assert.deepEqual;
+var root = process.cwd();
 
 
 suite("FileSytem:", function() {
@@ -43,6 +44,19 @@ suite("FileSytem:", function() {
         assert.throws(function() {
             sh.ls(["*.foo", "*.bar"]);
         }, "sh.listdir");
+    });
+
+    test("cwd", function() {
+        assert(sh.cwd().match(/test[\/\\]data$/));
+    });
+
+    test("abspath", function() {
+        assert(sh.abspath("/path/to/file") === "/path/to/file");
+    });
+
+    test("cd", function() {
+        sh.cd("../../");
+        assert(process.cwd() === root);
     });
 
     test("which", function() {

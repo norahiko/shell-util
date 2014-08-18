@@ -27,6 +27,7 @@ suite("Expand tool:", function () {
         assert(sh.expand("$cwd") === "/test");
         assert(sh.expand("$file") === "dir/file.js");
         assert(sh.expand("~") === process.env.HOME);
+        assert(sh.expand("'$file'") === "'$file'");
     });
 
     test("expand attributes", function() {

@@ -9,8 +9,12 @@ suite("Spawn:", function() {
         sh.writeFile("test/data/proc/proc.txt", "process");
     });
 
-
     test("spawn", function() {
+        var res = sh.spawn("echo", ["hello", "world"], { encoding: "utf8" });
+        assert(res.stdout === "hello world\n");
+    });
+
+    test("spawn cwd", function() {
         var res = sh.spawn("cat", ["proc/*.txt"], { cwd: "test/data" });
         assert(res.stdout.toString() === "exec process");
     });

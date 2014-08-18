@@ -5,6 +5,7 @@
   "main": "lib/shell-util.js",
   "scripts": {
     "test": "mocha -u tdd --require intelli-espower-loader",
+    "coverage": "mocha -u tdd --require blanket -R html-cov > coverage.html && google-chrome coverage.html",
     "coveralls": "mocha -u tdd --require blanket -R mocha-lcov-reporter | coveralls"
   },
   "author": "norahiko",
