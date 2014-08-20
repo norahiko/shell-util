@@ -11,7 +11,7 @@
   "author": "norahiko",
   "license": "MIT",
   "directories": {
-    "test": "test/"
+    "test": "test"
   },
   "dependencies": {
     "globy": "~0.1.3",
@@ -31,5 +31,20 @@
       "pattern": "lib",
       "data-cover-never": "node_modules"
     }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/norahiko/shell-util.git"
+  },
+  "keywords": [
+    "unix",
+    "shell",
+    "command",
+    "utility",
+    "glob",
+    "exec"
+  ],
+  "bugs": {
+    "url": "https://github.com/norahiko/shell-util/issues"
   }
 }
