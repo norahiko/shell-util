@@ -21,7 +21,7 @@ exports.setupTestFiles = function setup(sh) {
             └── util.txt
     */
     process.chdir(root);
-    sh.remove("test/data");
+    sh.remove("test/data", true);
     fs.mkdirSync(testdir);
     process.chdir(testdir);
     fs.writeFileSync("TESTDATA.txt", "testdata");
