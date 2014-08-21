@@ -193,6 +193,14 @@ suite("FileSytem:", function() {
         });
     });
 
+    test("remove dir", function() {
+        sh.remove("lib");
+        assert(fs.existsSync("lib"));
+
+        sh.remove("lib", true);
+        assert(fs.existsSync("lib") === false);
+    });
+
     test("readFile", function() {
         assert(sh.readFile("$main", "utf8") === "main");
     });
