@@ -1,4 +1,5 @@
 "use strict";
+
 var fs = require("fs");
 var root = process.cwd();
 

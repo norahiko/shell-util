@@ -1,5 +1,6 @@
 "use strict";
-var sh = require("../lib/shell-util.js");
+
+var sh = require("../lib/");
 var assert = require("power-assert");
 var setups = require("./setup.js");
 

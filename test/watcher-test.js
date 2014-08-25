@@ -1,4 +1,6 @@
-var sh = require("../lib/shell-util.js");
+"use strict";
+
+var sh = require("../lib/");
 var assert = require("power-assert");
 var pathModule = require("path");
 var fs = require("fs");
