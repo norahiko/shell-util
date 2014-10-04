@@ -1,6 +1,6 @@
 {
   "name": "shell-util",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Unix command utility on Node.js",
   "main": "lib/index.js",
   "scripts": {
